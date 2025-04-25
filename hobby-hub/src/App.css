@@ -1,0 +1,277 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  background-color: #333;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-content h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.search-form input {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+  width: 200px;
+}
+
+.header-content nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.header-content nav a {
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.header-content nav a:hover {
+  background-color: #555;
+}
+
+.home-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.sort-buttons {
+  margin-top: 0.5rem;
+}
+
+.sort-buttons button {
+  margin: 0 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sort-buttons button:hover {
+  background-color: #005fa3;
+}
+
+.post-list {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.post-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.post-card:hover {
+  transform: scale(1.02);
+}
+
+.post-time {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.post-title {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.post-upvotes {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.post-page {
+  padding: 2rem;
+}
+
+.post-page img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.comment-section {
+  margin-top: 2rem;
+}
+
+.comment-section textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.comment-section button {
+  padding: 0.5rem 1rem;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.comment-section button:hover {
+  background-color: #1565c0;
+}
+
+.comment {
+  background-color: #fafafa;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.post-detail-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 20px;
+}
+
+.post-box {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.post-detail-title {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.post-detail-content {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.post-detail-image {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.post-detail-category {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.post-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.upvote-button {
+  padding: 8px 12px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-button {
+  display: inline-block;
+  padding: 8px 14px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.edit-button:hover {
+  background-color: #0056b3;
+}
+.create-post-container,
+.edit-post-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-post-form div,
+.edit-post-form div {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.create-post-form input,
+.create-post-form textarea,
+.edit-post-form input,
+.edit-post-form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.create-post-buttons,
+.edit-post-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.create-button,
+.update-button,
+.delete-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.create-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.update-button {
+  background-color: #007bff;
+  color: white;
+  margin-bottom: 0.5rem;
+
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+}
