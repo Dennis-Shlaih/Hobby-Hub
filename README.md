@@ -2,7 +2,7 @@
 
 Submitted by: **Dennis Shlaih**
 
-This web app: **FitHub is a web app that allows users to share and engage with fitness-related posts. Users can create, view, edit, and delete posts that include a title, description, image, and category. Each post can be upvoted and commented on, encouraging community interaction and feedback. **
+This web app: **FitHub is a web app that allows users to share and engage with fitness-related posts. Users can create, view, edit, and delete posts that include a title, description, image, and category. Each post can be upvoted and commented on, encouraging community interaction and feedback.**
 
 Time spent: **15** hours spent in total
 
