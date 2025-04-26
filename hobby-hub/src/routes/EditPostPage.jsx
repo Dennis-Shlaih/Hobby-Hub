@@ -14,36 +14,21 @@ function EditPostPage() {
 
   useEffect(() => {
     const fetchPost = async () => {
-      const { data, error } = await supabase.from('posts').select('*').eq('id', id).single();
-      if (error) {
-        console.error('Error fetching post:', error);
-      } else {
-        setPost(data);
-      }
+      const { data } = await supabase.from('posts').select('*').eq('id', id).single();
+      setPost(data);
     };
     fetchPost();
   }, [id]);
 
   const handleUpdate = async (e) => {
     e.preventDefault();
-    const { error } = await supabase
-      .from('posts')
-      .update({
-        title: post.title,
-        content: post.content,
-        image_url: post.image_url,
-        category: post.category,
-      })
-      .eq('id', id);
-
-    if (!error) navigate('/');
-    else console.error('Error updating post:', error);
+    await supabase.from('posts').update(post).eq('id', id);
+    navigate('/');
   };
 
   const handleDelete = async () => {
-    const { error } = await supabase.from('posts').delete().eq('id', id);
-    if (!error) navigate('/');
-    else console.error('Error deleting post:', error);
+    await supabase.from('posts').delete().eq('id', id);
+    navigate('/');
   };
 
   return (
@@ -81,7 +66,6 @@ function EditPostPage() {
             onChange={(e) => setPost({ ...post, image_url: e.target.value })}
           />
         </div>
-
         <div className="edit-post-buttons">
           <button type="submit" className="update-button">Update Post</button>
           <button type="button" onClick={handleDelete} className="delete-button">Delete Post</button>
